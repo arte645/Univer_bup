@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -74,7 +74,7 @@ namespace Human
             {
                 for (int i = 0; i < 4; i++)
                 {
-                    Console.WriteLine("Кому назначаются приказы?");
+                    Console.WriteLine("Для кого назначаются приказы?");
                     string direction = Console.ReadLine();
                     Console.WriteLine("Какие приказы назначаются?");
                     List<string> orders = Console.ReadLine().Split(' ').ToList();
@@ -118,12 +118,12 @@ namespace Human
 
                 for (int i = 0; i < n; i++)
                 {
-                    Console.WriteLine("Введите предмет и преподавателя через пробел");
+                    Console.WriteLine("Введите предмет");
+                    string letter = Console.ReadLine();
+                    Console.WriteLine("Введите оценку и преподавателя через пробел");
                     string inf = Console.ReadLine();
                     string[] information = inf.Split(' ');
-                    Console.WriteLine("Введите оценку по этому предмету");
-                    string letter = Console.ReadLine();
-
+                    
                     letters[letter] = information;  //information -оценка, препод
                 }
 
