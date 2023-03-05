@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO.Pipes;
 using System.Linq;
@@ -78,11 +78,13 @@ namespace Универ
 
                         i = Move(new_key, i, n);
                     }
+                    i = 0;
                 }
 
                 if (key.Key == ConsoleKey.Enter && i == 1) // Выборки
                 {
                     Console.Clear();
+                    i = 0;
                     while (true)
                     {
                         Menu_Search(i);
@@ -110,7 +112,7 @@ namespace Универ
                             Search_Orders(boss);
                         }
 
-                        if (very_new_key.Key == ConsoleKey.Enter && i == 3) //выдать стаж в поликеке и в целом 
+                        if (very_new_key.Key == ConsoleKey.Enter && i == 4) //выдать стаж в поликеке и в целом 
                         {
                             Search_Teacher_Experience(teacher);
                         }
@@ -123,6 +125,7 @@ namespace Универ
 
                         i = Move(very_new_key, i, n);
                     }
+                    i = 0;
                 }
 
                 if (key.Key == ConsoleKey.Enter && i == 2)
