@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -73,7 +73,6 @@ namespace Menu_and_other_staff
             student = Student.Constract(student, name, birthday);
 
             student[student.Count - 1].letters = Student.Input(student[student.Count - 1].letters);
-            
             Console.Clear();
         }
     }
@@ -133,7 +132,7 @@ namespace Menu_and_other_staff
                         Console.Write($" {subject}");
                 }
             }
-
+            Console.WriteLine();
             Going_Back();
         }
 
@@ -229,7 +228,8 @@ namespace Menu_and_other_staff
 
             while (true)
             {
-                if (Console.ReadKey().Key == ConsoleKey.Enter)
+                ConsoleKeyInfo key = Console.ReadKey();
+                if (key.Key == ConsoleKey.Enter)
                 {
                     Console.Clear();
                     break;
