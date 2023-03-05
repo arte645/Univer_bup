@@ -73,6 +73,8 @@ namespace Menu_and_other_staff
             student = Student.Constract(student, name, birthday);
 
             student[student.Count - 1].letters = Student.Input(student[student.Count - 1].letters);
+            
+            Console.Clear();
         }
     }
     public class Output
