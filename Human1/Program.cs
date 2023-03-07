@@ -67,9 +67,7 @@ namespace Human
                 return boss;
             }
 
-            //он нужен для разделения приказов на 4 группы, у каждой свои приказы.
-
-            //Я делил на 3 группы, потому что боссы сами себе не приказывают
+            
             static public Dictionary<string, List<string>> Decanat(Dictionary<string, List<string>> order)
             {
                 for (int i = 0; i < 4; i++)
@@ -94,10 +92,9 @@ namespace Human
 
         public class Student : Human
         {
-            //а тут словарь для удобного разделения на предмет-долг и у какого учителя(по большей части просто выёбываюсь), в предмет будут суваться строка - предмет, оценка , препод
-            //если долг, то будет неуд
+            
 
-            public Dictionary<string, string[]> letters; //предмет - оценка, препод   //так удобно делать выборки по долгам, проверять, если ключ == 2, то выводить чо просят
+            public Dictionary<string, string[]> letters; 
             static public List<Student> Constract(List<Student> student, string surname, string birthday)
             {
                 Student person = new Student();
