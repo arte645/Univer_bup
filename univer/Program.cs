@@ -29,7 +29,7 @@ namespace Универ
 
                 ConsoleKeyInfo key = Console.ReadKey();
                 int n = 3;
-                if (key.Key == ConsoleKey.Enter && i == 0) // Ввод данных
+                if (key.Key == ConsoleKey.Enter && i == 0) 
                 {
                     Console.Clear();
                     while (true)
