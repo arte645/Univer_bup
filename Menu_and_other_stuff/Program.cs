@@ -10,7 +10,7 @@ namespace Menu_and_other_staff
 {
     public class Input
     {
-        public static void Input_Teacher(List<Teacher> teacher) //Ввод препода
+        public static void Input_Teacher(List<Teacher> teacher) 
         {
             Console.Clear();
             Console.WriteLine("Введите фамилию преподователя");
@@ -31,7 +31,7 @@ namespace Menu_and_other_staff
             Console.Clear();
         }
 
-        public static void Input_Tech(List<Tech> tech) //Ввод технички
+        public static void Input_Tech(List<Tech> tech) 
         {
             Console.Clear();
             Console.WriteLine("Введите фамилию технички");
@@ -46,7 +46,7 @@ namespace Menu_and_other_staff
             Console.Clear();
         }
 
-        public static void Input_Boss(List<Boss> boss) //Ввод босса
+        public static void Input_Boss(List<Boss> boss) 
         {
             Console.Clear();
             Console.WriteLine("Введите фамилию босса");
@@ -56,12 +56,12 @@ namespace Menu_and_other_staff
 
             boss = Boss.Constract(boss, name, birthday);
 
-            boss[boss.Count - 1].order = Boss.Decanat(boss[boss.Count - 1].order);  //Взял словарь только что добавленного босса и пишу туда данные
+            boss[boss.Count - 1].order = Boss.Decanat(boss[boss.Count - 1].order);  
 
             Console.Clear();
         }
 
-        public static void Input_Student(List<Student> student) //Вроде пашет, но не тестил пока
+        public static void Input_Student(List<Student> student) 
         {
             Console.Clear();
 
@@ -78,7 +78,7 @@ namespace Menu_and_other_staff
     }
     public class Output
     {
-        public static void Search_Bad_Guys(List<Student> student)//поиск должников
+        public static void Search_Bad_Guys(List<Student> student)
         {
 
             Console.Clear();
@@ -97,7 +97,7 @@ namespace Menu_and_other_staff
 
         }
 
-        public static void Search_Debt(List<Student> student)// поиск должников у конкретного препода
+        public static void Search_Debt(List<Student> student)
         {
 
             Console.Clear();
@@ -118,7 +118,7 @@ namespace Menu_and_other_staff
             Going_Back();
 
         }
-        public static void Search_Subject(List<Teacher> teacher)// поиск предметов, которые ведёт препод
+        public static void Search_Subject(List<Teacher> teacher)
         {
             Console.Clear();
             Console.WriteLine("Введите фамилию препода");
@@ -136,7 +136,7 @@ namespace Menu_and_other_staff
             Going_Back();
         }
 
-        public static void Search_Orders(List<Boss> boss)// поиск по приказам
+        public static void Search_Orders(List<Boss> boss)
         {
             Console.Clear();
 
@@ -157,7 +157,7 @@ namespace Menu_and_other_staff
             Going_Back();
         }
 
-        public static void Search_Teacher_Experience(List<Teacher> teacher)//поиск различного стажа препода
+        public static void Search_Teacher_Experience(List<Teacher> teacher)
         {
             Console.Clear();
 
@@ -190,7 +190,7 @@ namespace Menu_and_other_staff
             return i;
         }
 
-        public static void Menu_Start(int i)//стартовая менюшка
+        public static void Menu_Start(int i)
         {
             Console.SetCursorPosition(0, 0);
             Console.WriteLine("Ввод данных");
@@ -199,7 +199,7 @@ namespace Menu_and_other_staff
             Console.SetCursorPosition(40, i);
         }
 
-        public static void Menu_Input(int i) //Меню ввода
+        public static void Menu_Input(int i) 
         {
             Console.SetCursorPosition(0, 0);
             Console.WriteLine("Преподы");
@@ -210,7 +210,7 @@ namespace Menu_and_other_staff
             Console.SetCursorPosition(40, i);
         }
 
-        public static void Menu_Search(int i) //Меню выборок //Тут текст надо поменять и число n в мэйне
+        public static void Menu_Search(int i) 
         {
             Console.SetCursorPosition(0, 0);
             Console.WriteLine("Выдать студентов с долгами");
