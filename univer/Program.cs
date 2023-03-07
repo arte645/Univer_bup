@@ -16,19 +16,8 @@ namespace Универ
     {
         static void Main(string[] args)
         {
-            //преподы-фио.предметы.история препода, технички, управляющий персонал-издавать приказы:касаются студ,преподов,техничек,всех , студэнты (устэнко)-оценки по разным дисц у разных преподов,
-            //студенты с долгами(предмет,препод
-            // препод - долги именно у етого препода
-            // приказы (написать, кто выдал) для студентов
-            // для преподов
-            // для вспомог состава
-            // общие приказы
-            // по преподу выдать список дисциплин которые он ведёт
-            // общий стаж работы и стаж работы в поликеке для каждого препода
-            // в общий класс засунуть фио и дату рождения. забубенить наследованием
-
+            
             int i = 0;
-            //списки со всем-всем-всем.
             List<Teacher> teacher = new List<Teacher>();
             List<Tech> tech = new List<Tech>();
             List<Boss> boss = new List<Boss>();
@@ -50,26 +39,26 @@ namespace Универ
                         ConsoleKeyInfo new_key = Console.ReadKey();
                         n = 5;
 
-                        if (new_key.Key == ConsoleKey.Enter && i == 0) //Ввод препода
+                        if (new_key.Key == ConsoleKey.Enter && i == 0) 
                         {
                             Input_Teacher(teacher);
                         }
-                        if (new_key.Key == ConsoleKey.Enter && i == 1) //Ввод технички
+                        if (new_key.Key == ConsoleKey.Enter && i == 1) 
                         {
                             Input_Tech(tech);
                         }
 
-                        if (new_key.Key == ConsoleKey.Enter && i == 2) //Ввод управленца
+                        if (new_key.Key == ConsoleKey.Enter && i == 2) 
                         {
                             Input_Boss(boss);
                         }
 
-                        if (new_key.Key == ConsoleKey.Enter && i == 3) //Ввод студэнта
+                        if (new_key.Key == ConsoleKey.Enter && i == 3) 
                         {
                             Input_Student(student);
                         }
 
-                        if (new_key.Key == ConsoleKey.Enter && i == 4) //Выход
+                        if (new_key.Key == ConsoleKey.Enter && i == 4) 
                         {
                             Console.Clear();
                             Console.SetCursorPosition(40, 0);
@@ -81,7 +70,7 @@ namespace Универ
                     i = 0;
                 }
 
-                if (key.Key == ConsoleKey.Enter && i == 1) // Выборки
+                if (key.Key == ConsoleKey.Enter && i == 1) 
                 {
                     Console.Clear();
                     i = 0;
@@ -92,32 +81,32 @@ namespace Универ
                         ConsoleKeyInfo very_new_key = Console.ReadKey();
                         n = 6;
 
-                        if (very_new_key.Key == ConsoleKey.Enter && i == 0) //Студенты с долгами
+                        if (very_new_key.Key == ConsoleKey.Enter && i == 0) 
                         {
                             Search_Bad_Guys(student);
                         }
 
-                        if (very_new_key.Key == ConsoleKey.Enter && i == 1) //Долги у конкретного препода
+                        if (very_new_key.Key == ConsoleKey.Enter && i == 1) 
                         {
                             Search_Debt(student);
                         }
 
-                        if (very_new_key.Key == ConsoleKey.Enter && i == 2) //Список дисциплин, которые ведёт препод
+                        if (very_new_key.Key == ConsoleKey.Enter && i == 2) 
                         {
                             Search_Subject(teacher);
                         }
 
-                        if (very_new_key.Key == ConsoleKey.Enter && i == 3) //Приказы 
+                        if (very_new_key.Key == ConsoleKey.Enter && i == 3)
                         {
                             Search_Orders(boss);
                         }
 
-                        if (very_new_key.Key == ConsoleKey.Enter && i == 4) //выдать стаж в поликеке и в целом 
+                        if (very_new_key.Key == ConsoleKey.Enter && i == 4)  
                         {
                             Search_Teacher_Experience(teacher);
                         }
 
-                        if (very_new_key.Key == ConsoleKey.Enter && i == 5) //Выход
+                        if (very_new_key.Key == ConsoleKey.Enter && i == 5) 
                         {
                             Console.Clear();
                             break;
@@ -136,10 +125,6 @@ namespace Универ
                 i = Move(key, i, n);
             }
 
-
-
-            //Тута проверка списков на всякий случай
-            //Словари боссов выводятся как надо, всё ок
             Console.Clear();
             Console.SetCursorPosition(0, 0);
             foreach (Boss b in boss)
@@ -160,4 +145,3 @@ namespace Универ
         }
     }
 }
-//Идея засунуть конец менюшки в метод не алё, потому что для брейка надо возвращать какой-нибудь флаг, который потом снова надо проверять, в этом нет смысла
