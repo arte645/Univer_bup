@@ -17,7 +17,7 @@ namespace Human
             public string[] jobs;
             public string working;
             public string worked;
-            //конструктор, который создаёт обьект этого класса и добавляет его в список, такой есть в каждом классе.
+            
             static public List<Teacher> Constract(List<Teacher> teacher, string surname, string birthday, string[] jobs, string[] subject, string worked, string working)
             {
                 Teacher person = new Teacher();
@@ -53,7 +53,7 @@ namespace Human
 
         public class Boss : Human
         {
-            //словарь.
+            
             public Dictionary<string, List<string>> order;
             static public List<Boss> Constract(List<Boss> boss, string surname, string birthday)
             {
